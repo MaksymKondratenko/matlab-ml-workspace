@@ -5,5 +5,8 @@ k = alpha/m;
 
 hX = X*theta
 delta = hX-y
-T(1,1) = theta(1) - k* sum(delta .* X(:, 1));
-T(2,1) = theta(2) - k* sum(delta .* X(:, 2))
+
+for i=1:size(theta),
+  T(i,1) = theta(i) - k* sum(delta .* X(:, i));
+end;
+T
