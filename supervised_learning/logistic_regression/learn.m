@@ -15,6 +15,10 @@ while accuracy < 0.95 && iteration <= 2000,
   diagram(iteration, 2) = cost;
 end;
 
-plot(diagram);
 disp('Training finished. Reverting scale.');
 theta = deScaleTheta(X, theta)
+plot(diagram);
+
+if size(X, 2) == 3,
+    plotClassification(X, y);
+end
