@@ -1,6 +1,8 @@
 function theta = learn(X, y, theta, alpha, threshold);
 
+disp('Scaling features');
 X_scaled = scaleFeatures(X);
+disp('Learning started');
 
 iteration = 1;
 while costFunction(X_scaled, y, theta) > threshold
@@ -9,4 +11,5 @@ while costFunction(X_scaled, y, theta) > threshold
   iteration++;
 end;
 
+disp('Training finished. Reverting scale.');
 theta = deScaleTheta(X, theta)
