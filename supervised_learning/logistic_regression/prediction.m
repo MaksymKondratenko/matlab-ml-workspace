@@ -1,4 +1,4 @@
-function hX = prediction(featureVector, theta);
+function prediction = prediction(X, theta);
 
-    z = theta' * featureVector;
-    hX = 1 / (1 + e^-z);
+    z = X * theta;
+    prediction = 1 ./ (1 + e.^(-z));

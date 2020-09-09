@@ -1,14 +1,6 @@
 function J = costFunction(X, y, theta);
 
-m = size(X, 1)
-k = -1/m
+m = size(X, 1);
+hX = prediction(X, theta);
 
-costSum = 0;
-for i = 1:m,
-    features = extractFeatureVector(X,i);
-    hXi = prediction(features, theta);
-    costI = y(i) * log(hXi) + (1 - y(i)) * log(1 - hXi);
-    costSum = costSum + costI;
-    i++;
-end;
-J = k * costSum;
+J = 1/m * (-y' * log(hX) - (1 - y)' * log(1 - hX));
