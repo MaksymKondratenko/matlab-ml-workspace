@@ -1,0 +1,10 @@
+# Created by Octave 5.2.0, Wed Sep 09 21:15:20 2020 GMT <unknown@DESKTOP-2TAEOIE>
+# name: thetas
+# type: matrix
+# rows: 3
+# columns: 1
+ -25.01347048378889
+ 0.20504639189491636
+ 0.20027130438737523
+
+
