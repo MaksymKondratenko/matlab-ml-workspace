@@ -1,4 +1,4 @@
-function cost = costFunction(xi, y, thetaHidden, thetaOutput, lambda);
+function cost = costFunction(X, y, thetaHidden, thetaOutput, lambda);
 
     % xi is n x 1 since it is a feature vector
     % thetaHidden is Sj x (Sj-1 + 1)
