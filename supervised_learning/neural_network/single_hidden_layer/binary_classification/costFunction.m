@@ -4,7 +4,7 @@ function cost = costFunction(X, y, thetaHidden, thetaOutput, lambda);
     % thetaHidden is Sj x (Sj-1 + 1)
     % thetaOutput is K x (Sj + 1)
     m = size(X, 1);
-    J = zeros(m, 1)
+    J = zeros(m, 1);
     for i = 1:m,
         xi = X(i,:)'; % n x 1
         yi = y(i,:)'; % K x 1
